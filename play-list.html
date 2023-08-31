@@ -1,11 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Spotify Clone Project</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <h1>My play list</h1>
+    <div class="App">
+        <div class="App__top-bar">
+            <div class="App__header">
+                <div class="App__song-navigation">
+                    <div class="App__song-navigation-prev">
+                        <a href="index.html">
+                        <svg role="img"  height="24" width="24" viewBox="0 0 24 24">
+                            <polyline points="16 4 7 12 16 20" fill="none" stroke="#fff"></polyline>
+                        </svg></a>
+                    </div>
+                    <div class="App__song-navigation-next">
+                        <svg role="img" focusable="false" height="24" width="24" viewBox="0 0 24 24">
+                            <polyline points="8 4 17 12 8 20" fill="none" stroke="#fff"></polyline>
+                        </svg>
+                    </div>
+                </div>
+             
+            </div>
+        </div>
+        <div class="App__nav-bar">
+            <div class="App__logo">
+                <img width="150px" src="assets/Spotify logo.png" alt="logo">
+            </div>
+            <div class=".App__categories-nav-playlist">
+                <div class="App__category-item App__category-item--selected">
+                    <div class="icon"><svg viewBox="0 0 576 512" width="100" title="home">
+                            <path
+                                d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"
+                                fill="#fff" />
+                        </svg></div>
+                    <span>Home</span>
+                </div>
+                <div class="App__category-item">
+                    <div class="icon"><svg viewBox="0 0 512 512" width="100" title="search">
+                            <path
+                                d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                                fill="#C4C4C4" />
+                        </svg></div>
+                    <span>Search</span>
+                </div>
+                <div class="App__category-item">
+                    <div class="icon"><svg width="112" height="111" viewBox="0 0 112 111" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="8" height="111" fill="#C4C4C4" />
+                            <rect x="24" width="8" height="111" fill="#C4C4C4" />
+                            <rect width="7.96484" height="111.503"
+                                transform="matrix(0.869849 -0.493319 0.506711 0.862116 48 14.7345)" fill="#C4C4C4" />
+                        </svg>
+                    </div>
+                    <span><a href="play-list.html" style="text-decoration: none; color:#c4c4c4" >Your Library</a></span>
+                </div>
+                <div class="App__category-item">PLAYLISTS</div>
+                
+            </div>
+            <div class="App__playlists-nav-play">
+              
+                <div class="App__category-item">
+                    <div class="icon">
+                        <img src="assets\plus.png" alt="plus">
+                    </div>
+                    <span>Create Playlist</span>
+                </div>
+                <div class="App__category-item">
+                    <div class="icon">
+                        <img width="35px" src="assets\Purple-big.png" alt="liked">
+                    </div>
+                    <span><a href="play-list.html" style="text-decoration: none; color:#c4c4c4" >Liked Songs</a></span>
+                </div>
+             
+            </div>
+     <div class="m-4">
+        <img width="130px" src="assets\album art.png" alt="img">
+     </div>
+        </div>
+        <div class="App__now-playing-bar">
+            <div class="function">
+                <div class="music">
+                    <img src="assets\playing-img.png" alt="" />
+                    <div class="details">
+                        <div class="name">Dreaming On</div>
+                        <div class="artist">Netflix</div>
+                    </div>
+                    <div class="love">
+                        <img src="assets\bx_bxs-heart.png" alt="love" />
+
+                    </div>
+                </div>
+                <div class="playback">
+                    <div class="upper">
+                        <img src="https://cdn-icons-png.flaticon.com/512/724/724979.png" alt="shuffle" />
+                        <img src="https://cdn-icons-png.flaticon.com/512/3318/3318703.png" alt="back" />
+                        <!-- <img src="https://cdn-icons-png.flaticon.com/512/2088/2088562.png" alt="pause" class="pause" /> -->
+                        <i class="fa-sharp fa-solid fa-circle-play" style="color: #ffffff;"></i>
+                        <img src="https://cdn-icons-png.flaticon.com/512/4211/4211386.png" alt="forward" />
+                        <img src="https://cdn-icons-png.flaticon.com/512/4146/4146819.png" alt="loop" />
+                    </div>
+                    <div class="lower">
+                        <div class="text">2:11</div>
+                        <div class="line">
+                            <div class="inner-line">
+
+                            </div>
+                        </div>
+                        <div class="text">2:42</div>
+                    </div>
+                </div>
+                <div class="control">
+                    <div class="images">
+                        <img src="assets\microphone.png" alt="mic" />
+                        <img src="https://cdn-icons-png.flaticon.com/512/98/98068.png" alt="queue" />
+                        <img src="https://cdn-icons-png.flaticon.com/512/2777/2777142.png" alt="device" />
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25695.png" alt="volume" />
+                        <div class="line">
+                            <div class="inner-line">
+
+                            </div>
+                        </div>
+                        <i class=" m-4 fa-sharp fa-solid fa-down-left-and-up-right-to-center"
+                            style="color: #c1bfbf;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="App__main-view">
+            <div class="App__top-gradient-playlist" ></div>
+            <div class="App__header-placeholder"></div>
+            <section class="App__section App__quick-links" style="margin-top: -45px;">
+               
+                <div class="App__quick-links-container">
+                   <div class="d-flex " style="width: max-content; white-space: nowrap;
+                   overflow: hidden !important;
+                   text-overflow: ellipsis;">
+                    <div>
+                       <img  width="180" src="assets\pop-rn2.png" alt="pop"/>
+                    </div>
+                    <div class="mt-4">
+                        <p style="color: #c1bfbf;">PLAYLIST</p>
+                        <h1><b>Pop Right Now</b></h1>
+                        <p style="color: #c1bfbf; margin-bottom:0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus</p>
+                        <div class="d-flex "><strong style="color: #ffffff; margin-right: 20px;">Spotify</strong><ul class="d-flex"  style="color: #c1bfbf;"><li>860,305 likes</li><li style="  margin-left: 26px;"  style="color: #c1bfbf;">100 songs </li></ul><span  style="color: #c1bfbf;"> , 5hr 5min</span></div>
+                      
+                    </div>
+                   </div>
+                </div>
+            </section>
+            <div class="d-flex align-items-center px-4, pb-4" style="border-bottom:1px solid rgb(79, 79, 79)"  >
+                <div class="px-4">
+                <img src="assets\play.png" alt="play">
+                </div>
+                <div >
+                    <img src="assets\heart.png" alt="play">
+                    </div>
+                    <div class="px-4">
+                        <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="5.9541" cy="12" r="1.5" fill="white"/>
+                            <circle cx="12.165" cy="12" r="1.5" fill="white"/>
+                            <circle cx="18.376" cy="12" r="1.5" fill="white"/>
+                            </svg>
+                    </div>
+            </div>
+           <section class="playlist-table">
+               <table>
+                <thead>
+                    <tr>
+                      <th  scope="col"># TITLE</th>
+                      <th scope="col">ALBUM</th>
+                      <th scope="col" colspan="2">DATE ADDED</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr> 
+                       <td ><img width="15px" src="assets\Polygon.svg" ><img width="35px" src="assets\Rectangle 9.png" style=" margin-left: 10px;"><div style="display:inline-block; text-align: center; margin-left: 10px;"><span>We're good</span><br><span>Dua Lipa</span></div></td>
+                       <td><span style=" margin-left: 10px;">Future Nostalgia (The Moonlight Edition)</span></td>
+                       <td><span style=" margin-left: 10px;">Future Nostalgia (The Moonlight Edition)</span></td>
+                       <td style="text-align: right;"> <img src="assets\heart.png" alt="play" style="margin-right:4px">2:45 <svg width="25" height="15" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="5.9541" cy="12" r="1.5" fill="white"/>
+                        <circle cx="12.165" cy="12" r="1.5" fill="white"/>
+                        <circle cx="18.376" cy="12" r="1.5" fill="white"/>
+                        </svg>
+                </div></td>
+                    </tr>
+                    <tr> 
+                        <td >2<img width="35px" src="assets\list img.png" style=" margin-left: 10px;"><div style="display:inline-block; text-align: center; margin-left: 10px;"><span>We're good</span><br><span>Dua Lipa</span></div></td>
+                        <td><span style=" margin-left: 10px;">Future Nostalgia (The Moonlight Edition)</span></td>
+                        <td><span style=" margin-left: 10px;">Future Nostalgia (The Moonlight Edition)</span></td>
+                        <td style="text-align: right;"> 2:45 <svg width="25" height="15" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <circle cx="5.9541" cy="12" r="1.5" fill="white"/>
+                         <circle cx="12.165" cy="12" r="1.5" fill="white"/>
+                         <circle cx="18.376" cy="12" r="1.5" fill="white"/>
+                         </svg>
+                 </div></td>
+                     </tr>
+                     <tr> 
+                        <td >3<img width="35px" src="assets\list img.png" style=" margin-left: 10px;"><div style="display:inline-block; text-align: center; margin-left: 10px;"><span>We're good</span><br><span>Dua Lipa</span></div></td>
+                        <td><span style=" margin-left: 10px;">Future Nostalgia (The Moonlight Edition)</span></td>
+                        <td><span style=" margin-left: 10px;">Future Nostalgia (The Moonlight Edition)</span></td>
+                        <td style="text-align: right;"> 2:45 <svg width="25" height="15" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <circle cx="5.9541" cy="12" r="1.5" fill="white"/>
+                         <circle cx="12.165" cy="12" r="1.5" fill="white"/>
+                         <circle cx="18.376" cy="12" r="1.5" fill="white"/>
+                         </svg>
+                 </div></td>
+                     </tr>
+                     <tr> 
+                        <td >4<img width="35px" src="assets\list img.png" style=" margin-left: 10px;"><div style="display:inline-block; text-align: center; margin-left: 10px;"><span>We're good</span><br><span>Dua Lipa</span></div></td>
+                        <td><span style=" margin-left: 10px;">Future Nostalgia (The Moonlight Edition)</span></td>
+                        <td><span style=" margin-left: 10px;">Future Nostalgia (The Moonlight Edition)</span></td>
+                        <td style="text-align: right;"> 2:45 <svg width="25" height="15" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <circle cx="5.9541" cy="12" r="1.5" fill="white"/>
+                         <circle cx="12.165" cy="12" r="1.5" fill="white"/>
+                         <circle cx="18.376" cy="12" r="1.5" fill="white"/>
+                         </svg>
+                 </div></td>
+                     </tr>
+                     <tr> 
+                        <td >5<img width="35px" src="assets\list img.png" style=" margin-left: 10px;"><div style="display:inline-block; text-align: center; margin-left: 10px;"><span>We're good</span><br><span>Dua Lipa</span></div></td>
+                        <td><span style=" margin-left: 10px;">Future Nostalgia (The Moonlight Edition)</span></td>
+                        <td><span style=" margin-left: 10px;">Future Nostalgia (The Moonlight Edition)</span></td>
+                        <td style="text-align: right;"> 2:45 <svg width="25" height="15" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <circle cx="5.9541" cy="12" r="1.5" fill="white"/>
+                         <circle cx="12.165" cy="12" r="1.5" fill="white"/>
+                         <circle cx="18.376" cy="12" r="1.5" fill="white"/>
+                         </svg>
+                 </div></td>
+                     </tr>
+                     <tr> 
+                        <td >6<img width="35px" src="assets\list img.png" style=" margin-left: 10px;"><div style="display:inline-block; text-align: center; margin-left: 10px;"><span>We're good</span><br><span>Dua Lipa</span></div></td>
+                        <td><span style=" margin-left: 10px;">Future Nostalgia (The Moonlight Edition)</span></td>
+                        <td><span style=" margin-left: 10px;">Future Nostalgia (The Moonlight Edition)</span></td>
+                        <td style="text-align: right;"> 2:45 <svg width="25" height="15" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <circle cx="5.9541" cy="12" r="1.5" fill="white"/>
+                         <circle cx="12.165" cy="12" r="1.5" fill="white"/>
+                         <circle cx="18.376" cy="12" r="1.5" fill="white"/>
+                         </svg>
+                 </div></td>
+                     </tr>
+                     <tr> 
+                        <td >7<img width="35px" src="assets\list img.png" style=" margin-left: 10px;"><div style="display:inline-block; text-align: center; margin-left: 10px;"><span>We're good</span><br><span>Dua Lipa</span></div></td>
+                        <td><span style=" margin-left: 10px;">Future Nostalgia (The Moonlight Edition)</span></td>
+                        <td><span style=" margin-left: 10px;">Future Nostalgia (The Moonlight Edition)</span></td>
+                        <td style="text-align: right;"> 2:45 <svg width="25" height="15" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <circle cx="5.9541" cy="12" r="1.5" fill="white"/>
+                         <circle cx="12.165" cy="12" r="1.5" fill="white"/>
+                         <circle cx="18.376" cy="12" r="1.5" fill="white"/>
+                         </svg>
+                 </div></td>
+                     </tr>
+                     <tr> 
+                        <td >8<img width="35px" src="assets\list img.png" style=" margin-left: 10px;"><div style="display:inline-block; text-align: center; margin-left: 10px;"><span>We're good</span><br><span>Dua Lipa</span></div></td>
+                        <td><span style=" margin-left: 10px;">Future Nostalgia (The Moonlight Edition)</span></td>
+                        <td><span style=" margin-left: 10px;">Future Nostalgia (The Moonlight Edition)</span></td>
+                        <td style="text-align: right;"> 2:45 <svg width="25" height="15" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <circle cx="5.9541" cy="12" r="1.5" fill="white"/>
+                         <circle cx="12.165" cy="12" r="1.5" fill="white"/>
+                         <circle cx="18.376" cy="12" r="1.5" fill="white"/>
+                         </svg>
+                 </div></td>
+                     </tr>
+                     <tr> 
+                        <td >9<img width="35px" src="assets\list img.png" style=" margin-left: 10px;"><div style="display:inline-block; text-align: center; margin-left: 10px;"><span>We're good</span><br><span>Dua Lipa</span></div></td>
+                        <td><span style=" margin-left: 10px;">Future Nostalgia (The Moonlight Edition)</span></td>
+                        <td><span style=" margin-left: 10px;">Future Nostalgia (The Moonlight Edition)</span></td>
+                        <td style="text-align: right;"> 2:45 <svg width="25" height="15" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <circle cx="5.9541" cy="12" r="1.5" fill="white"/>
+                         <circle cx="12.165" cy="12" r="1.5" fill="white"/>
+                         <circle cx="18.376" cy="12" r="1.5" fill="white"/>
+                         </svg>
+                 </div></td>
+                     </tr>
+
+                </tbody>
+
+               </table>
+            </section>
+         
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

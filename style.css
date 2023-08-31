@@ -8,7 +8,7 @@
 }
 
 .App {
-  --vertical-nav-width: 340px;
+  --vertical-nav-width: 270px;
   --now-playing-bar-height: 11vh;
   width: 100vw;
   height: 100vh;
@@ -45,11 +45,16 @@
 }
 .App__logo {
   display: grid;
+  margin-right: 125px;
   place-items: center;
 }
 .App__categories-nav {
   color: #c4c4c4;
   padding: 18px 12px;
+}
+.App__categories-nav-playlist {
+  color: #c4c4c4;
+  padding: 0px 12px;
 }
 .App__category-item--selected {
   color: #fff;
@@ -67,6 +72,7 @@
   flex-direction: row;
   align-items: center;
   margin: 5px 0;
+  color: #c4c4c4;
 }
 .App__category-item .icon {
   width: 36px;
@@ -78,6 +84,10 @@
 .App__category-item .icon svg {
   width: 24px;
   height: 24px;
+}
+.App__playlists-nav-play{
+  color: #aaa8a8;
+  padding: 0px 18px;
 }
 .App__playlists-nav {
   color: #c4c4c4;
@@ -115,7 +125,7 @@
   display: flex;
   flex-direction: row;
 }
-.App__song-navigation-prev, .App__song-navigation-next {
+ .App__song-navigation-next {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -125,6 +135,17 @@
   place-items: center;
   margin-right: 16px;
   cursor: not-allowed;
+}
+.App__song-navigation-prev{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  margin-right: 16px;
+  cursor: pointer;
 }
 .App__song-navigation-prev svg, .App__song-navigation-next svg {
   color: #fff;
@@ -167,6 +188,17 @@
   margin-top: -60px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6) 0%, #121212 100%);
   background-color: #5028f0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.App__top-gradient-playlist {
+  height: 290px;
+  width: 100%;
+  margin-top: -60px;
+  background-image: linear-gradient(rgb(173 173 173 / 60%) 0%, #262626 100%);
+  background-color: #6cd8d5;
   position: absolute;
   top: 0;
   right: 0;
@@ -285,6 +317,7 @@
   text-overflow: ellipsis;
 
 }
+
 .App__section-grid-item span {
   color: #686868;
   font-size: 0.8em;
@@ -470,4 +503,49 @@
 
 .App__playlists-nav::-webkit-scrollbar {
   display: none;
+}
+.playlist-table::-webkit-scrollbar {
+  display: none;
+}
+.playlist-table{
+  position: relative;
+  z-index: -1;
+  max-height: calc(50vh - var(--now-playing-bar-height));
+  overflow-x: hidden;
+  overflow-y: scroll;
+  margin-top: -10px;
+  scrollbar-width: none;
+}
+
+table {
+  border-collapse: collapse;
+  width: 95%;
+  margin-left: 18px;
+  background-color:rgb(18,18,18);
+}
+
+ td {
+  padding: 8px;
+  text-align: left;
+  color:#c1bfbf;
+}
+
+tr{
+  line-height: 14px;
+}
+
+table th{
+  /* line-height: ; */
+  color:#c1bfbf;;
+  background-color: rgb(18,18,18);
+  position: sticky;
+  top: 0;
+  font-size: 12px;
+  /* padding:8px; */
+  z-index: 1;
+}
+
+tbody tr:first-child {
+  color: #fff;
+  background-color: rgba(50, 50, 50, 0.6);
 }
