@@ -45,7 +45,7 @@
 }
 .App__logo {
   display: grid;
-  margin-right: 125px;
+  margin-right: 65px;
   place-items: center;
 }
 .App__categories-nav {
@@ -212,6 +212,9 @@
   padding: 16px 32px;
   color: #fff;
 }
+
+
+
 .App__quick-links-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
@@ -504,6 +507,9 @@
 .App__playlists-nav::-webkit-scrollbar {
   display: none;
 }
+.App__section-grid-container::-webkit-scrollbar {
+  display: none;
+}
 .playlist-table::-webkit-scrollbar {
   display: none;
 }
@@ -513,7 +519,7 @@
   max-height: calc(50vh - var(--now-playing-bar-height));
   overflow-x: hidden;
   overflow-y: scroll;
-  margin-top: -10px;
+  margin-top: -6px;
   scrollbar-width: none;
 }
 
